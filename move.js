@@ -1,4 +1,9 @@
-HTMLElement.prototype.moveElement = function(parent) {
-  const newParent = document.querySelector(parent);
-  newParent.appendChild(this);
+EasyElement.prototype.print = function(text) {
+  const p = document.createElement("p");
+  const pNode = document.createTextNode(text);
+  p.appendChild(pNode);
+  document.body.appendChild(p);
+}
+EasyElement.prototype.documentation = function() {
+  EasyElement.print("Documentation")
 }
