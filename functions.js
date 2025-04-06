@@ -11,9 +11,13 @@ EasyEl.prototype.documentation = function() {
   console.log("test");
 }
 EasyEl.prototype.print = function(printText) {
-  console.log("test");
   const text = document.createElement("p");
   text.innerHTML = printText;
+  document.body.appendChild(text);
+}
+EasyEl.prototype.printAsText = function(printText) {
+  const text = document.createElement("p");
+  text.textContent = printText;
   document.body.appendChild(text);
 }
 let easyEl = new EasyEl();
